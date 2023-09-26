@@ -21,9 +21,12 @@ header #barre_menu nav a{
     padding: 1vw 2.5vw 1vw 2.5vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
+    font-size: 1.1vw;
 }
 header #barre_menu nav a:hover{
-    background: linear-gradient(to top,black,rgb(66, 61, 61));
+    background: linear-gradient(to top,black,rgb(29, 26, 26));
+    border-bottom-style: solid;
+    border-color: red;
 }
 header #titre{
     margin-top: 3.5vw;
@@ -44,7 +47,7 @@ header #titre #slogon{
     z-index: 5;
     color: whitesmoke;
     padding: 8vw 0 0 22vw;
-    text-shadow: -5px 8px 2px rgb(88, 6, 6);
+    text-shadow: -1vw 0.8vw 0.2vw rgb(88, 6, 6);
 }
 header #titre #slogon #slogon_haut{
     display: flex;
@@ -112,9 +115,10 @@ section{
 section .boite{
     margin: 3vw 6vw 3vw 6vw;
     padding: 2vw;
-    border-radius: 20px;
+    border-radius: 30px;
     border-style: solid;
     line-height: 2vw;
+    cursor: pointer;
 }
 section .boite:hover{
     background-color: black;
@@ -125,15 +129,21 @@ section .boite h1{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 section .boite p{
-    font-size: 1vw;
+    font-size: 1.1vw;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 section .boite div{
     margin: 1.5vw;
 }
+section .boite .chapitre div{
+    display: none;
+}
+section .boite .chapitre:hover div{
+    display: block;
+}
 footer{
     padding: 2vw;
-    animation : 6s infinite ease-in-out anim2;
+    animation : 8s infinite ease-in-out anim2;
 }
 @keyframes anim2{
     0%{
@@ -152,6 +162,9 @@ footer{
         background-color: rgba(95, 44, 3, 0.822);
     }
 }
+footer{
+    bottom: 0;
+}
 footer #fin{
     display: flex;
     color: white;
@@ -159,6 +172,7 @@ footer #fin{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     letter-spacing: 0.2vw;
     line-height: 2vw;
+    cursor: pointer;
 }
 footer #fin #info_site{
     padding: 3vw;
@@ -172,6 +186,48 @@ footer #fin #info_site u li a{
     text-decoration: none;
     color: rgb(70, 34, 11);
 }
+footer #fin #info_site u li a:hover{
+    text-decoration: underline;
+}
 footer #fin #contacte{
     padding: 3vw;
+}
+footer #fin #contacte div{
+    display: flex;
+}
+footer #fin #contacte div div{
+    width: 2.5vw;
+    margin-left: 0.6vw;
+}
+footer #fin #contacte #site{
+    width: 2vw;
+    margin-top: 0.3vw;
+}
+footer #fin #contacte div img{
+    width: 100%;
+    border-radius: 50px;
+}
+@media (max-width : 700px ){
+    header #titre{
+        margin-top: 5vw;
+    }
+    header #barre_menu nav a{
+        padding: 5vw 2.5vw 1vw 2.5vw;
+    }
+    section .boite{
+        padding: 4vw;
+        border-radius: 15px;
+        border-style: solid;
+        border-width: 0.5vw;
+        line-height: 2.6vw;
+    }
+    section .boite div{
+        margin: 1vw;
+    }
+    section .boite h1{
+        font-size: 2.8vw;
+    }
+    section .boite p{
+        font-size: 2vw;
+    }
 }
